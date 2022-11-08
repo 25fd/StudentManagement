@@ -35,14 +35,14 @@
             this.studentDOB = new System.Windows.Forms.TextBox();
             this.fID = new System.Windows.Forms.TextBox();
             this.fName = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.fEmail = new System.Windows.Forms.TextBox();
+            this.fNumber = new System.Windows.Forms.TextBox();
+            this.fQualification = new System.Windows.Forms.TextBox();
+            this.cNumber = new System.Windows.Forms.TextBox();
+            this.cName = new System.Windows.Forms.TextBox();
+            this.cDescription = new System.Windows.Forms.TextBox();
+            this.cRoom = new System.Windows.Forms.TextBox();
+            this.cMaxAllowed = new System.Windows.Forms.TextBox();
             this.add_std = new System.Windows.Forms.Button();
             this.remove_std = new System.Windows.Forms.Button();
             this.clear_std = new System.Windows.Forms.Button();
@@ -56,6 +56,10 @@
             this.clear_course = new System.Windows.Forms.Button();
             this.display_cpurse = new System.Windows.Forms.Button();
             this.lbx_students = new System.Windows.Forms.ListBox();
+            this.lbc_faculties = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.std_course_selection = new System.Windows.Forms.Button();
+            this.fclt_course_selection = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // studentID
@@ -107,61 +111,61 @@
             this.fName.Size = new System.Drawing.Size(250, 47);
             this.fName.TabIndex = 6;
             // 
-            // textBox8
+            // fEmail
             // 
-            this.textBox8.Location = new System.Drawing.Point(1017, 454);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(250, 47);
-            this.textBox8.TabIndex = 7;
+            this.fEmail.Location = new System.Drawing.Point(1017, 454);
+            this.fEmail.Name = "fEmail";
+            this.fEmail.Size = new System.Drawing.Size(250, 47);
+            this.fEmail.TabIndex = 7;
             // 
-            // textBox9
+            // fNumber
             // 
-            this.textBox9.Location = new System.Drawing.Point(1382, 454);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(250, 47);
-            this.textBox9.TabIndex = 8;
+            this.fNumber.Location = new System.Drawing.Point(1382, 454);
+            this.fNumber.Name = "fNumber";
+            this.fNumber.Size = new System.Drawing.Size(250, 47);
+            this.fNumber.TabIndex = 8;
             // 
-            // textBox10
+            // fQualification
             // 
-            this.textBox10.Location = new System.Drawing.Point(1797, 454);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(250, 47);
-            this.textBox10.TabIndex = 9;
+            this.fQualification.Location = new System.Drawing.Point(1797, 454);
+            this.fQualification.Name = "fQualification";
+            this.fQualification.Size = new System.Drawing.Size(250, 47);
+            this.fQualification.TabIndex = 9;
             // 
-            // textBox11
+            // cNumber
             // 
-            this.textBox11.Location = new System.Drawing.Point(126, 866);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(250, 47);
-            this.textBox11.TabIndex = 10;
+            this.cNumber.Location = new System.Drawing.Point(126, 866);
+            this.cNumber.Name = "cNumber";
+            this.cNumber.Size = new System.Drawing.Size(250, 47);
+            this.cNumber.TabIndex = 10;
             // 
-            // textBox12
+            // cName
             // 
-            this.textBox12.Location = new System.Drawing.Point(567, 866);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(250, 47);
-            this.textBox12.TabIndex = 11;
+            this.cName.Location = new System.Drawing.Point(567, 866);
+            this.cName.Name = "cName";
+            this.cName.Size = new System.Drawing.Size(250, 47);
+            this.cName.TabIndex = 11;
             // 
-            // textBox13
+            // cDescription
             // 
-            this.textBox13.Location = new System.Drawing.Point(1017, 866);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(250, 47);
-            this.textBox13.TabIndex = 12;
+            this.cDescription.Location = new System.Drawing.Point(1017, 866);
+            this.cDescription.Name = "cDescription";
+            this.cDescription.Size = new System.Drawing.Size(250, 47);
+            this.cDescription.TabIndex = 12;
             // 
-            // textBox14
+            // cRoom
             // 
-            this.textBox14.Location = new System.Drawing.Point(1382, 866);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(250, 47);
-            this.textBox14.TabIndex = 13;
+            this.cRoom.Location = new System.Drawing.Point(1382, 866);
+            this.cRoom.Name = "cRoom";
+            this.cRoom.Size = new System.Drawing.Size(250, 47);
+            this.cRoom.TabIndex = 13;
             // 
-            // textBox15
+            // cMaxAllowed
             // 
-            this.textBox15.Location = new System.Drawing.Point(1797, 866);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(250, 47);
-            this.textBox15.TabIndex = 14;
+            this.cMaxAllowed.Location = new System.Drawing.Point(1797, 866);
+            this.cMaxAllowed.Name = "cMaxAllowed";
+            this.cMaxAllowed.Size = new System.Drawing.Size(250, 47);
+            this.cMaxAllowed.TabIndex = 14;
             // 
             // add_std
             // 
@@ -219,6 +223,7 @@
             this.remove_fclty.TabIndex = 20;
             this.remove_fclty.Text = "remove faculty";
             this.remove_fclty.UseVisualStyleBackColor = true;
+            this.remove_fclty.Click += new System.EventHandler(this.remove_fclty_Click);
             // 
             // clear_fclty
             // 
@@ -228,6 +233,7 @@
             this.clear_fclty.TabIndex = 21;
             this.clear_fclty.Text = "clear faculty";
             this.clear_fclty.UseVisualStyleBackColor = true;
+            this.clear_fclty.Click += new System.EventHandler(this.clear_fclty_Click);
             // 
             // display_fclty
             // 
@@ -237,6 +243,7 @@
             this.display_fclty.TabIndex = 22;
             this.display_fclty.Text = "display faculty";
             this.display_fclty.UseVisualStyleBackColor = true;
+            this.display_fclty.Click += new System.EventHandler(this.display_fclty_Click);
             // 
             // add_course
             // 
@@ -246,6 +253,7 @@
             this.add_course.TabIndex = 23;
             this.add_course.Text = "add Course";
             this.add_course.UseVisualStyleBackColor = true;
+            this.add_course.Click += new System.EventHandler(this.add_course_Click);
             // 
             // remove_course
             // 
@@ -255,6 +263,7 @@
             this.remove_course.TabIndex = 24;
             this.remove_course.Text = "remove Course";
             this.remove_course.UseVisualStyleBackColor = true;
+            this.remove_course.Click += new System.EventHandler(this.remove_course_Click);
             // 
             // clear_course
             // 
@@ -264,6 +273,7 @@
             this.clear_course.TabIndex = 25;
             this.clear_course.Text = "clear Course";
             this.clear_course.UseVisualStyleBackColor = true;
+            this.clear_course.Click += new System.EventHandler(this.clear_course_Click);
             // 
             // display_cpurse
             // 
@@ -273,6 +283,7 @@
             this.display_cpurse.TabIndex = 26;
             this.display_cpurse.Text = "disply Course";
             this.display_cpurse.UseVisualStyleBackColor = true;
+            this.display_cpurse.Click += new System.EventHandler(this.display_cpurse_Click);
             // 
             // lbx_students
             // 
@@ -284,11 +295,54 @@
             this.lbx_students.TabIndex = 27;
             this.lbx_students.SelectedIndexChanged += new System.EventHandler(this.lbx_students_SelectedIndexChanged);
             // 
+            // lbc_faculties
+            // 
+            this.lbc_faculties.FormattingEnabled = true;
+            this.lbc_faculties.ItemHeight = 41;
+            this.lbc_faculties.Location = new System.Drawing.Point(1897, 588);
+            this.lbc_faculties.Name = "lbc_faculties";
+            this.lbc_faculties.Size = new System.Drawing.Size(300, 209);
+            this.lbc_faculties.TabIndex = 28;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 41;
+            this.listBox2.Location = new System.Drawing.Point(1915, 1043);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(300, 209);
+            this.listBox2.TabIndex = 29;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
+            // std_course_selection
+            // 
+            this.std_course_selection.Location = new System.Drawing.Point(-3, 3);
+            this.std_course_selection.Name = "std_course_selection";
+            this.std_course_selection.Size = new System.Drawing.Size(429, 58);
+            this.std_course_selection.TabIndex = 30;
+            this.std_course_selection.Text = "Student Course Selection";
+            this.std_course_selection.UseVisualStyleBackColor = true;
+            this.std_course_selection.Click += new System.EventHandler(this.std_course_selection_Click);
+            // 
+            // fclt_course_selection
+            // 
+            this.fclt_course_selection.Location = new System.Drawing.Point(481, 12);
+            this.fclt_course_selection.Name = "fclt_course_selection";
+            this.fclt_course_selection.Size = new System.Drawing.Size(350, 58);
+            this.fclt_course_selection.TabIndex = 31;
+            this.fclt_course_selection.Text = "Faculty Course Selection";
+            this.fclt_course_selection.UseVisualStyleBackColor = true;
+            this.fclt_course_selection.Click += new System.EventHandler(this.fclt_course_selection_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2209, 1018);
+            this.ClientSize = new System.Drawing.Size(2332, 1378);
+            this.Controls.Add(this.fclt_course_selection);
+            this.Controls.Add(this.std_course_selection);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.lbc_faculties);
             this.Controls.Add(this.lbx_students);
             this.Controls.Add(this.display_cpurse);
             this.Controls.Add(this.clear_course);
@@ -302,14 +356,14 @@
             this.Controls.Add(this.clear_std);
             this.Controls.Add(this.remove_std);
             this.Controls.Add(this.add_std);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.cMaxAllowed);
+            this.Controls.Add(this.cRoom);
+            this.Controls.Add(this.cDescription);
+            this.Controls.Add(this.cName);
+            this.Controls.Add(this.cNumber);
+            this.Controls.Add(this.fQualification);
+            this.Controls.Add(this.fNumber);
+            this.Controls.Add(this.fEmail);
             this.Controls.Add(this.fName);
             this.Controls.Add(this.fID);
             this.Controls.Add(this.studentDOB);
@@ -333,14 +387,14 @@
         private TextBox studentDOB;
         private TextBox fID;
         private TextBox fName;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
+        private TextBox fEmail;
+        private TextBox fNumber;
+        private TextBox fQualification;
+        private TextBox cNumber;
+        private TextBox cName;
+        private TextBox cDescription;
+        private TextBox cRoom;
+        private TextBox cMaxAllowed;
         private Button add_std;
         private Button remove_std;
         private Button clear_std;
@@ -354,5 +408,9 @@
         private Button clear_course;
         private Button display_cpurse;
         private ListBox lbx_students;
+        private ListBox lbc_faculties;
+        private ListBox listBox2;
+        private Button std_course_selection;
+        private Button fclt_course_selection;
     }
 }

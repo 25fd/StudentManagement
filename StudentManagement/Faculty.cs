@@ -13,7 +13,7 @@ namespace StudentManagement
         private string _faculty_email;
         private string _faculty_phone;
         private string _faculty_qualification;
-        private List<string> _course_names;
+        private string _course_names;
         public static Dictionary<int, Faculty> faculties = new();
 
         public Faculty(
@@ -29,45 +29,50 @@ namespace StudentManagement
             this._faculty_email = fclt_email;
             this._faculty_phone = fclt_phone;
             this._faculty_qualification = fclt_qualification;
-            this._course_names = new List<string>();
+            this._course_names = "";
         }
 
-        public static void AddStudent(Faculty f)
+        public static void AddFaculty(Faculty f)
         {
             faculties.Add(f._faculty_id, f);
         }
 
-        public static Dictionary<int, Faculty>.ValueCollection GetAllStudents()
+        public static Dictionary<int, Faculty>.ValueCollection GetAllFaculties()
         {
             return faculties.Values;
         }
 
-        public static void RemoveStudents(int Id)
+        public static void RemoveFaculty(int Id)
         {
             faculties.Remove(Id);
         }
 
-        public static void ClearStudents()
+        public static void ClearFaculties()
         {
             faculties.Clear();
         }
 
-        public static void AddCoursesToStuends(int ID, string course_name)
+        public static void AddCourseToFaculties(int ID, string course_name)
         {
-            faculties[ID]._course_names.Add(course_name);
+            faculties[ID]._course_names = course_name;
         }
 
-        public static List<Faculty> GetStudentByCourseName(string coruse_name)
+        public static string getFacultyCourse(int ID)
         {
-            List<Faculty> faculties_list = new List<Faculty>();
+            return faculties[ID]._course_names;
+        }
+
+        public static Faculty GetFacultiesByCourseName(string coruse_name)
+        {
+            Faculty faculty = null; 
             foreach (Faculty f in faculties.Values)
             {
-                if (f._course_names.Contains(coruse_name))
+                if (f._course_names == coruse_name)
                 {
-                    faculties_list.Add(f);
+                    return f;
                 }
             }
-            return faculties_list;
+            return faculty;
         }
         public override string ToString()
         {

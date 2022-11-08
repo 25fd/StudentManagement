@@ -44,14 +44,14 @@ namespace StudentManagement
             courses.Remove(cName);
         }
 
-        public static void ClearStudents()
+        public static void ClearCourses()
         {
             courses.Clear();
         }
 
-        public static List<string> GetAllCourseNames () 
+        public static HashSet<string> GetAllCourseNames () 
         {
-            return courses.Keys.ToList();
+            return courses.Keys.ToHashSet<string>();
         }
 
         public override string ToString()

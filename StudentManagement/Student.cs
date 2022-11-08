@@ -16,7 +16,7 @@ namespace StudentManagement
         private string _student_email;
         private string _student_phone;
         private string _dob;
-        private List<string> _course_names;
+        private HashSet<string> _course_names;
         private static Dictionary<int, Student> students = new();
 
         public Student(
@@ -32,7 +32,7 @@ namespace StudentManagement
             this._student_email = std_email;
             this._student_phone = std_phone;
             this._dob = std_dob;
-            this._course_names = new List<string>();
+            this._course_names = new HashSet<string>();
         }
 
         public static void AddStudent(Student s) {
@@ -53,7 +53,7 @@ namespace StudentManagement
             students.Clear();
         }
 
-        public static void AddCoursesToStuends(int ID,string course_name) {
+        public static void AddCoursesToStuend(int ID,string course_name) {
             students[ID]._course_names.Add(course_name);
         }
 
@@ -68,6 +68,11 @@ namespace StudentManagement
                 }
             }
             return students_list;
+        }
+
+        public static HashSet<string> GetStudentCourseName(int Id)
+        {
+            return students[Id]._course_names;
         }
         public override string ToString()
         {
