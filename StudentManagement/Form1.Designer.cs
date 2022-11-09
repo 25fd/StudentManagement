@@ -228,6 +228,7 @@
             this.clear_std.TabIndex = 17;
             this.clear_std.Text = "clear Student";
             this.clear_std.UseVisualStyleBackColor = true;
+            this.clear_std.Click += new System.EventHandler(this.clear_std_Click);
             // 
             // display_std
             // 
