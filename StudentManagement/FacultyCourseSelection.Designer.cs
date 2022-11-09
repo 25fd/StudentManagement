@@ -33,13 +33,17 @@
             this.fclt_id = new System.Windows.Forms.TextBox();
             this.clouse_list_box = new System.Windows.Forms.ComboBox();
             this.slected_course = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ft_unassign = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // go
             // 
-            this.go.Location = new System.Drawing.Point(1014, 178);
+            this.go.Location = new System.Drawing.Point(377, 423);
+            this.go.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.go.Name = "go";
-            this.go.Size = new System.Drawing.Size(188, 58);
+            this.go.Size = new System.Drawing.Size(135, 28);
             this.go.TabIndex = 0;
             this.go.Text = "GO";
             this.go.UseVisualStyleBackColor = true;
@@ -47,50 +51,85 @@
             // 
             // stslect_course
             // 
-            this.stslect_course.Location = new System.Drawing.Point(1014, 560);
+            this.stslect_course.Location = new System.Drawing.Point(241, 352);
+            this.stslect_course.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.stslect_course.Name = "stslect_course";
-            this.stslect_course.Size = new System.Drawing.Size(207, 58);
+            this.stslect_course.Size = new System.Drawing.Size(90, 28);
             this.stslect_course.TabIndex = 1;
-            this.stslect_course.Text = "select Course";
+            this.stslect_course.Text = "Assign";
             this.stslect_course.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.stslect_course.UseVisualStyleBackColor = true;
             this.stslect_course.Click += new System.EventHandler(this.stslect_course_Click);
             // 
             // fclt_id
             // 
-            this.fclt_id.Location = new System.Drawing.Point(381, 160);
+            this.fclt_id.Location = new System.Drawing.Point(274, 78);
+            this.fclt_id.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.fclt_id.Name = "fclt_id";
-            this.fclt_id.Size = new System.Drawing.Size(250, 47);
+            this.fclt_id.Size = new System.Drawing.Size(120, 27);
             this.fclt_id.TabIndex = 2;
             // 
             // clouse_list_box
             // 
             this.clouse_list_box.FormattingEnabled = true;
-            this.clouse_list_box.Location = new System.Drawing.Point(381, 560);
+            this.clouse_list_box.Location = new System.Drawing.Point(274, 262);
+            this.clouse_list_box.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.clouse_list_box.Name = "clouse_list_box";
-            this.clouse_list_box.Size = new System.Drawing.Size(302, 49);
+            this.clouse_list_box.Size = new System.Drawing.Size(144, 28);
             this.clouse_list_box.TabIndex = 3;
             // 
             // slected_course
             // 
             this.slected_course.AutoSize = true;
-            this.slected_course.Location = new System.Drawing.Point(1318, 407);
+            this.slected_course.Location = new System.Drawing.Point(620, 199);
+            this.slected_course.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.slected_course.Name = "slected_course";
-            this.slected_course.Size = new System.Drawing.Size(97, 41);
+            this.slected_course.Size = new System.Drawing.Size(49, 20);
             this.slected_course.TabIndex = 4;
-            this.slected_course.Text = "label1";
+            this.slected_course.Text = "Result";
             this.slected_course.Click += new System.EventHandler(this.slected_course_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(121, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "FacultyID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(121, 270);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Available COurse";
+            // 
+            // ft_unassign
+            // 
+            this.ft_unassign.Location = new System.Drawing.Point(533, 352);
+            this.ft_unassign.Name = "ft_unassign";
+            this.ft_unassign.Size = new System.Drawing.Size(94, 29);
+            this.ft_unassign.TabIndex = 7;
+            this.ft_unassign.Text = "UnAssign";
+            this.ft_unassign.UseVisualStyleBackColor = true;
             // 
             // FacultyCourseSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2095, 1193);
+            this.ClientSize = new System.Drawing.Size(905, 515);
+            this.Controls.Add(this.ft_unassign);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.slected_course);
             this.Controls.Add(this.clouse_list_box);
             this.Controls.Add(this.fclt_id);
             this.Controls.Add(this.stslect_course);
             this.Controls.Add(this.go);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "FacultyCourseSelection";
             this.Text = "s";
             this.Load += new System.EventHandler(this.FacultyCourseSelection_Load);
@@ -106,5 +145,8 @@
         private TextBox fclt_id;
         private ComboBox clouse_list_box;
         private Label slected_course;
+        private Label label1;
+        private Label label2;
+        private Button ft_unassign;
     }
 }
