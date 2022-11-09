@@ -125,5 +125,10 @@ namespace StudentManagement
             FacultyCourseSelection fcltForm = new FacultyCourseSelection();
             fcltForm.Show();
         }
+
+        private void clear_std_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

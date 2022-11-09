@@ -59,5 +59,10 @@ namespace StudentManagement
             Student.AddCoursesToStuend(Int32.Parse(std_id.Text), selection.ToString());
             updateListBoxes();
         }
+
+        private void std_information_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

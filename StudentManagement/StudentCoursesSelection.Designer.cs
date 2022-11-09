@@ -99,6 +99,7 @@
             this.std_information.Name = "std_information";
             this.std_information.Size = new System.Drawing.Size(816, 250);
             this.std_information.TabIndex = 7;
+            this.std_information.SelectedIndexChanged += new System.EventHandler(this.std_information_SelectedIndexChanged);
             // 
             // StudentCoursesSelection
             // 
