@@ -24,17 +24,31 @@ namespace StudentManagement
             string fclt_qualification
             )
         {
-            this._faculty_id = Int32.Parse(fclt_id);
-            this._faculty_name = fclt_name;
-            this._faculty_email = fclt_email;
-            this._faculty_phone = fclt_phone;
-            this._faculty_qualification = fclt_qualification;
-            this._course_names = "";
+            try
+            {
+                this._faculty_id = Int32.Parse(fclt_id);
+                this._faculty_name = fclt_name;
+                this._faculty_email = fclt_email;
+                this._faculty_phone = fclt_phone;
+                this._faculty_qualification = fclt_qualification;
+                this._course_names = "";
+            }
+            catch
+            {
+                MessageBox.Show("Please Enter Valid Data");
+            }
         }
 
         public static void AddFaculty(Faculty f)
         {
-            faculties.Add(f._faculty_id, f);
+            try
+            {
+                faculties.Add(f._faculty_id, f);
+            }
+            catch (ArgumentException e) 
+            {
+                MessageBox.Show("Faculty already added");
+            }
         }
 
         public static Dictionary<int, Faculty>.ValueCollection GetAllFaculties()
@@ -44,7 +58,13 @@ namespace StudentManagement
 
         public static void RemoveFaculty(int Id)
         {
+            try {
             faculties.Remove(Id);
+            }
+            catch (ArgumentNullException e)
+            {
+                MessageBox.Show("Student with Id not found");
+            }
         }
 
         public static void ClearFaculties()
@@ -54,12 +74,36 @@ namespace StudentManagement
 
         public static void AddCourseToFaculties(int ID, string course_name)
         {
+            try { 
             faculties[ID]._course_names = course_name;
+            }
+            catch (KeyNotFoundException e)
+            {
+                MessageBox.Show("Student with Id not found");
+            }
+        }
+
+        public static void RemoveCourseFromFaculty(int ID)
+        {
+            try { 
+            faculties[ID]._course_names = "";
+            }
+            catch (KeyNotFoundException e)
+            {
+                MessageBox.Show("Student with Id not found");
+            }
         }
 
         public static string getFacultyCourse(int ID)
         {
+            try { 
             return faculties[ID]._course_names;
+            }
+            catch (KeyNotFoundException e)
+            {
+                MessageBox.Show("Student with Id not found");
+            }
+            return null;
         }
 
         public static Faculty GetFacultiesByCourseName(string coruse_name)

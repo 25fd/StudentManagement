@@ -21,17 +21,31 @@ namespace StudentManagement
             string c_max_allowed_student,
             string c_room,
             string c_number
-            ) { 
-            this._course_name = c_name;
-            this._course_discription = c_description;
-            this._course_max_allowed_students = Int32.Parse(c_max_allowed_student);
-            this._course_room = Int32.Parse(c_room);
-            this._course_number = Int32.Parse(c_number);
+            ) {
+            try
+            {
+                this._course_name = c_name;
+                this._course_discription = c_description;
+                this._course_max_allowed_students = Int32.Parse(c_max_allowed_student);
+                this._course_room = Int32.Parse(c_room);
+                this._course_number = Int32.Parse(c_number);
+            }
+            catch 
+            {
+                MessageBox.Show("Please Enter Valid Data");
+            }
         }
 
         public static void AddCourse(Course c)
         {
-            courses.Add(c._course_name, c);
+            try
+            {
+                courses.Add(c._course_name, c);
+            }
+            catch (ArgumentException e)
+            {
+                MessageBox.Show("course already added found");
+            }
         }
 
         public static Dictionary<string, Course>.ValueCollection GetAllCourses()
@@ -47,6 +61,18 @@ namespace StudentManagement
         public static void ClearCourses()
         {
             courses.Clear();
+        }
+
+        public static Course GetCoueseDetailsByNAme(string cName)
+        {
+            try {
+            return courses[cName];
+            }
+            catch (KeyNotFoundException)
+            {
+                MessageBox.Show("course not found");
+            }
+            return null;
         }
 
         public static HashSet<string> GetAllCourseNames () 

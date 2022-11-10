@@ -52,5 +52,16 @@ namespace StudentManagement
             slected_course.Text = selection.ToString();
             clouse_list_box.Items.Clear();
         }
+
+        private void ft_unassign_Click(object sender, EventArgs e)
+        {
+            Faculty.RemoveCourseFromFaculty(Int32.Parse(fclt_id.Text));
+            slected_course.Text = "No Selection";
+            avialbleCourses = Course.GetAllCourseNames();
+            foreach (string cName in avialbleCourses)
+            {
+                clouse_list_box.Items.Add(cName);
+            }
+        }
     }
 }

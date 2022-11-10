@@ -27,16 +27,29 @@ namespace StudentManagement
             string std_dob
             )
         {
-            this._student_id = Int32.Parse(std_id);
-            this._student_name = std_name; 
-            this._student_email = std_email;
-            this._student_phone = std_phone;
-            this._dob = std_dob;
-            this._course_names = new HashSet<string>();
+            try
+            {
+                this._student_id = Int32.Parse(std_id);
+                this._student_name = std_name;
+                this._student_email = std_email;
+                this._student_phone = std_phone;
+                this._dob = std_dob;
+                this._course_names = new HashSet<string>();
+            }
+            catch
+            {
+                MessageBox.Show("Please Enter Valid Data");
+            }
         }
 
         public static void AddStudent(Student s) {
-            students.Add(s._student_id, s);
+            try
+            {
+                students.Add(s._student_id, s);
+            }
+            catch (ArgumentException e) {
+                MessageBox.Show("Student with Id alredy present");
+            }
         }
 
         public static Dictionary<int, Student>.ValueCollection GetAllStudents()
@@ -54,7 +67,34 @@ namespace StudentManagement
         }
 
         public static void AddCoursesToStuend(int ID,string course_name) {
-            students[ID]._course_names.Add(course_name);
+            try
+            {
+
+                students[ID]._course_names.Add(course_name);
+            }
+            catch (KeyNotFoundException e)
+            {
+                MessageBox.Show("Student with Id not found");
+            }
+            catch (ArgumentException e)
+            {
+                MessageBox.Show("Course alredy selected");
+            }
+        }
+
+        public static void RemoveCourseFromStudent(int ID, string course_name)
+        {
+            try
+            {
+                students[ID]._course_names.Remove(course_name);
+            }
+            catch (KeyNotFoundException e) {
+                MessageBox.Show("Student with Id not found");
+            }
+            catch (ArgumentException e)
+            {
+                MessageBox.Show("Course alredy selected");
+            }
         }
 
         public static List<Student> GetStudentByCourseName(string coruse_name) 
@@ -72,7 +112,13 @@ namespace StudentManagement
 
         public static HashSet<string> GetStudentCourseName(int Id)
         {
-            return students[Id]._course_names;
+            try { 
+                return students[Id]._course_names;
+            }
+            catch (KeyNotFoundException e) {
+                MessageBox.Show("Student with Id not found");
+            }
+            return null;
         }
         public override string ToString()
         {

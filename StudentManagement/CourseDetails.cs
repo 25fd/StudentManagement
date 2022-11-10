@@ -20,6 +20,7 @@ namespace StudentManagement
         private void display_course_summary_Click(object sender, EventArgs e)
         {
             string courseName = course_name.Text.Trim();
+            lbx_course.Items.Add(Course.GetCoueseDetailsByNAme(courseName));
             Faculty faculty = Faculty.GetFacultiesByCourseName(courseName);
             List<Student> students = Student.GetStudentByCourseName(courseName);
             lbx_faculty.Items.Add(faculty.ToString());

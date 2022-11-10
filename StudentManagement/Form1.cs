@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace StudentManagement
 {
     public partial class Form1 : Form
@@ -41,6 +43,7 @@ namespace StudentManagement
 
         private void display_std_Click(object sender, EventArgs e)
         {
+            lbx_students.Items.Clear();
             Dictionary<int, Student>.ValueCollection  register_students= Student.GetAllStudents();
             foreach (Student s in register_students)
             {
@@ -65,6 +68,7 @@ namespace StudentManagement
 
         private void display_fclty_Click(object sender, EventArgs e)
         {
+            lbc_faculties.Items.Clear();
             Dictionary<int, Faculty>.ValueCollection register_faculties = Faculty.GetAllFaculties();
             foreach (Faculty f in register_faculties)
             {
@@ -100,6 +104,7 @@ namespace StudentManagement
 
         private void display_cpurse_Click(object sender, EventArgs e)
         {
+            listBox2.Items.Clear();
 
             Dictionary<string, Course>.ValueCollection registered_courses = Course.GetAllCourses();
             foreach (Course c in registered_courses)
@@ -128,7 +133,18 @@ namespace StudentManagement
 
         private void clear_std_Click(object sender, EventArgs e)
         {
+            Student.ClearStudents();
+        }
 
+        private void remove_std_Click(object sender, EventArgs e)
+        {
+            Student.RemoveStudents(Int32.Parse(studentID.Text)); 
+        }
+
+        private void btn_Summary_Click(object sender, EventArgs e)
+        {
+            CourseDetails c = new CourseDetails();
+            c.Show();
         }
     }
 }

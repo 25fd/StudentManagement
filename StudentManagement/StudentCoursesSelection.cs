@@ -55,7 +55,6 @@ namespace StudentManagement
         private void select_courses_Click(object sender, EventArgs e)
         {
             Object selection = available_courses.SelectedItem;
-            Console.WriteLine(selection.ToString());
             Student.AddCoursesToStuend(Int32.Parse(std_id.Text), selection.ToString());
             updateListBoxes();
         }
@@ -63,6 +62,19 @@ namespace StudentManagement
         private void std_information_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unasign_course_Click(object sender, EventArgs e)
+        {
+            Object selection = selected_courses.SelectedItem;
+            avialbleCourses = Course.GetAllCourseNames();
+            Student.RemoveCourseFromStudent(Int32.Parse(std_id.Text), selection.ToString());
+            updateListBoxes();
         }
     }
 }
